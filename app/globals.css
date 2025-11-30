@@ -356,3 +356,110 @@ footer a:hover {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+/* ====== AMMO PAGE STYLES ====== */
+
+.page-section {
+  padding: 120px 20px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-transform: uppercase;
+  font-size: 26px;
+  color: var(--blue-soft);
+  text-shadow: 0 0 14px rgba(0,153,255,0.45);
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+}
+
+.page-sub {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* ===== GRID ===== */
+.ammo-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ===== CARD ===== */
+.ammo-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(0,153,255,0.4);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,153,255,0.2);
+  transition: 0.25s;
+  position: relative;
+}
+
+.ammo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 26px rgba(0,153,255,0.45);
+}
+
+/* Ефект блиску при наведенні */
+.ammo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,153,255,0.2), transparent 70%);
+  opacity: 0;
+  transition: 0.25s;
+}
+.ammo-card:hover::before {
+  opacity: 1;
+}
+
+/* ===== IMAGE BLOCK ===== */
+.ammo-img {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #000;
+}
+
+.ammo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.15);
+  transition: 0.3s;
+}
+
+.ammo-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+/* ===== TEXT ===== */
+.ammo-body {
+  padding: 16px 14px 18px;
+}
+
+.ammo-body h3 {
+  font-size: 17px;
+  color: var(--blue-soft);
+  margin-bottom: 8px;
+  text-shadow: 0 0 8px rgba(0,153,255,0.4);
+}
+
+.ammo-body p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
